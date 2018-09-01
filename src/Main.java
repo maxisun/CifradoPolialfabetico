@@ -1,21 +1,17 @@
-import java.util.ArrayList;
-import java.util.List;
-
-import Class.Texto;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        ArrayList<Integer> ascii = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
 
-        for(int i=65;i<91;i++){
-            ascii.add(i);
-        }
+        String palabra = scanner.nextLine();
+        String[] alfabeto = palabra.toUpperCase().split("[A-Z]+",palabra.length());
+        String[] direcciones = palabra.toUpperCase().split("[0-9]+",palabra.length());
 
-        Texto texto = new Texto(ascii,"1");
-
-        texto.print(ascii);
-
+        StringBuffer buffer = new StringBuffer();
+        buffer.append((char)('A'+25));
+        //System.out.println(buffer.toString());
     }
 }
