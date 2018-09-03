@@ -21,12 +21,8 @@ public class encriptar {
             lista2.add(ascii[i]);
         }
 
-        //System.out.println("Ingrese cifrado:");
-        //String cifrado = scanner.nextLine().toUpperCase();
         String cifrado = args[0].toUpperCase();
-        //System.out.println("Ingrese Texto:");
         String palabra = args[1].toUpperCase();
-        //String palabra = scanner.nextLine().toUpperCase();
 
         String[] alfabeto = cifrado.split("[A-Z]+",cifrado.length()); //empieza en 0
         String[] direcciones = cifrado.split("\\d+",cifrado.length()); //empieza en 1
@@ -61,14 +57,4 @@ public class encriptar {
         System.out.println(buffer.toString());
     }
     
-    
-    /*
-    
-    Ingrese cifrado:
-3A56I6D7000D
-Ingrese Texto:
-PENEGRUESO
-VKSKMX0KYU
-    
-    */
 }
