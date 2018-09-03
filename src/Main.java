@@ -31,9 +31,9 @@ public class Main {
 
         for(int i=0;i<a;i++){ //recorre los alfabetos
             if(direcciones[cont_letras].equals("I")){
-                Collections.rotate(lista2,Integer.parseInt(alfabeto[cont_numeros]));
-            }else if(direcciones[cont_letras].equals("D")){
                 Collections.rotate(lista2,-(Integer.parseInt(alfabeto[cont_numeros])));
+            }else if(direcciones[cont_letras].equals("D")){
+                Collections.rotate(lista2,Integer.parseInt(alfabeto[cont_numeros]));
             }
             cont_letras++;
             cont_numeros++;
@@ -46,63 +46,6 @@ public class Main {
         }
         System.out.println(buffer.toString());
 
-
-                /*
-        buffer.append((char)(palabra.charAt(0)-Integer.parseInt(alfabeto[cont_numeros])));
-        buffer.append((char)(palabra.charAt(1)-Integer.parseInt(alfabeto[cont_numeros])));
-        //System.out.println(palabra.charAt(0)-1);
-        */
-
-
-/*
-        for(int i=0;i<a;i++){ //recorre los alfabetos
-            for(int j=0;j<palabra.length();j++){ //recorre la palabra
-                if(direcciones[cont_letras].equals("I")){ //si es izquierda
-                    if(palabra.charAt(j)<='P'){
-                        buffer.append((char)(palabra.charAt(j)+Integer.parseInt(alfabeto[cont_numeros])+1));
-                    }else{
-                        buffer.append((char)(palabra.charAt(j)+Integer.parseInt(alfabeto[cont_numeros])));
-                    }
-                }else if(direcciones[cont_letras].equals("D")){
-                    if(palabra.charAt(j)>='P'){
-                        buffer.append((char)(palabra.charAt(j)- Integer.parseInt(alfabeto[cont_numeros])-1));
-                    }else {
-                        buffer.append((char) (palabra.charAt(j) - Integer.parseInt(alfabeto[cont_numeros])));
-                    }
-                }
-            }
-            cont_letras++;
-            cont_numeros++;
-            System.out.println(buffer.toString());
-        }
-*/
-
-/*
-        int pene = 0;
-        for(int i=0;i<a;i++){ //recorre los alfabetos
-            for(int j=0;j<palabra.length();j++){ //recorre la palabra
-                if(direcciones[cont_letras].equals("I")){
-                    Collections.rotate(lista,Integer.parseInt(alfabeto[cont_numeros]));
-                    pene = lista.indexOf((int)palabra.charAt(j));
-                    System.out.println(pene);
-                    //buffer.append((char) Integer.parseInt(String.valueOf(lista.get(pene + Integer.parseInt(alfabeto[cont_numeros]) ))));
-                }else if(direcciones[cont_letras].equals("D")){
-                    Collections.rotate(lista,-Integer.parseInt(alfabeto[cont_numeros]));
-                    //pene = lista.indexOf((int)palabra.charAt(j));
-                    //buffer.append((char) Integer.parseInt(String.valueOf(lista.get(pene - Integer.parseInt(alfabeto[cont_numeros])))));
-                }
-            }
-            cont_letras++;
-            cont_numeros++;
-            System.out.println(buffer);
-            palabra = buffer.toString();
-            buffer.setLength(0);
-        }
-
-        */
-        //System.out.print(buffer.toString());
-
     }
-
 
 }
